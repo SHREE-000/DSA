@@ -1,1 +1,1 @@
-console.log("sample");
+console.log("sampl1e");
