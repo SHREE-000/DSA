@@ -1,1 +1,1 @@
-console.log("s ample");
+console.log("sample123");
