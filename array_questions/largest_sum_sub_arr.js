@@ -19,13 +19,14 @@
 // Explanation: The subarray {5,4,1,7,8} has the largest sum 25.
 
 const findLargestSum = (arr) => {
-    const set = new Set();
-    let sum = 0;
-    for(let i = 0; i < arr.length; i ++) {
-        sum += arr[i];
-        set.add(sum);
+    const len = arr.length;
+    let maxSoFar = arr[0];
+    let maxEnding = arr[0];
+    for(let i = 1; i < len; i ++) {
+        maxEnding = Math.max(arr[i], maxEnding + arr[i]);
+        maxSoFar = Math.max(maxSoFar, maxEnding);
     }
-    console.log(set, 'set set');
+    return maxSoFar;
 };
 
 const arr = [-2,-3,4,-1,-2,1,5,-3]
